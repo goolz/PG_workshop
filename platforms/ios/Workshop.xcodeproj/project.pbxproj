@@ -15,8 +15,8 @@
 		3047A5121AB8059700498E2A /* build-debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3047A50F1AB8059700498E2A /* build-debug.xcconfig */; };
 		3047A5131AB8059700498E2A /* build-release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3047A5101AB8059700498E2A /* build-release.xcconfig */; };
 		3047A5141AB8059700498E2A /* build.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3047A5111AB8059700498E2A /* build.xcconfig */; };
-		8A737D2A66B74B1998EDABD7 /* CDVDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CCA4204C0144BBBAFEDB3F /* CDVDevice.m */; };
-		0625B772164440AEA35A8E71 /* CDVLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 1769EB7768524709833D46B6 /* CDVLogger.m */; };
+		DF679B038DDD4124A8133632 /* CDVLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 148D94D386FA45A8ADF35D64 /* CDVLogger.m */; };
+		69C1C95DCF1A4295A933EFBB /* CDVDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 12045E4CD50048F2BB516361 /* CDVDevice.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,10 +56,10 @@
 		EB87FDF41871DAF40020F90C /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = ../../config.xml; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = "Workshop/config.xml"; sourceTree = "<group>"; };
 		ED33DF2A687741AEAF9F8254 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "Bridging-Header.h"; sourceTree = "<group>"; };
-		E8CCA4204C0144BBBAFEDB3F /* CDVDevice.m */ = {isa = PBXFileReference; name = "CDVDevice.m"; path = "cordova-plugin-device/CDVDevice.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
-		2D36740F7DBB4247B211DA7C /* CDVDevice.h */ = {isa = PBXFileReference; name = "CDVDevice.h"; path = "cordova-plugin-device/CDVDevice.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
-		1769EB7768524709833D46B6 /* CDVLogger.m */ = {isa = PBXFileReference; name = "CDVLogger.m"; path = "cordova-plugin-console/CDVLogger.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
-		F96ABF6033EB406799786614 /* CDVLogger.h */ = {isa = PBXFileReference; name = "CDVLogger.h"; path = "cordova-plugin-console/CDVLogger.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		148D94D386FA45A8ADF35D64 /* CDVLogger.m */ = {isa = PBXFileReference; name = "CDVLogger.m"; path = "cordova-plugin-console/CDVLogger.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		4D3BE660C82F4FC4BFA9F664 /* CDVLogger.h */ = {isa = PBXFileReference; name = "CDVLogger.h"; path = "cordova-plugin-console/CDVLogger.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		12045E4CD50048F2BB516361 /* CDVDevice.m */ = {isa = PBXFileReference; name = "CDVDevice.m"; path = "cordova-plugin-device/CDVDevice.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		6267AB82B6514643B4CA9DAD /* CDVDevice.h */ = {isa = PBXFileReference; name = "CDVDevice.h"; path = "cordova-plugin-device/CDVDevice.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,10 +162,10 @@
 		307C750510C5A3420062BCA9 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
-				E8CCA4204C0144BBBAFEDB3F /* CDVDevice.m */,
-				2D36740F7DBB4247B211DA7C /* CDVDevice.h */,
-				1769EB7768524709833D46B6 /* CDVLogger.m */,
-				F96ABF6033EB406799786614 /* CDVLogger.h */,
+				148D94D386FA45A8ADF35D64 /* CDVLogger.m */,
+				4D3BE660C82F4FC4BFA9F664 /* CDVLogger.h */,
+				12045E4CD50048F2BB516361 /* CDVDevice.m */,
+				6267AB82B6514643B4CA9DAD /* CDVDevice.h */,
 			);
 			name = Plugins;
 			path = "Workshop/Plugins";
@@ -280,8 +280,8 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
-				8A737D2A66B74B1998EDABD7 /* CDVDevice.m in Sources */,
-				0625B772164440AEA35A8E71 /* CDVLogger.m in Sources */,
+				DF679B038DDD4124A8133632 /* CDVLogger.m in Sources */,
+				69C1C95DCF1A4295A933EFBB /* CDVDevice.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

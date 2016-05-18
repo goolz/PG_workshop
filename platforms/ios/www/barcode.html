@@ -1,0 +1,33 @@
+
+<!DOCTYPE HTML>
+  <html>
+  <head>
+    <title>Barcode Scanner DEMO</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <script type="text/javascript">
+
+      function scanBarcode() {
+        cordova.plugins.barcodeScanner.scan( function(result) {
+                alert("We got a barcode\n" +
+                          "Result: " + result.text + "\n" +
+                          "Format: " + result.format + "\n" +
+                          "Cancelled: " + result.cancelled);
+            }, function(error) {
+                alert("Scanning failed: " + error);
+            }
+      );
+
+      }
+    </script>
+  </head>
+
+  <body>
+    <hr> BarcodeReader DEMO <hr><br>
+    <input type="button" onClick ="scanBarcode()" value ="Scan" />
+      
+    <script src="js/app.js"></script>
+    <script src="cordova.js"></script>
+  </body>
+  </html>

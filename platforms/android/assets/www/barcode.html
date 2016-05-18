@@ -16,6 +16,7 @@
                           "Result: " + result.text + "\n" +
                           "Format: " + result.format + "\n" +
                           "Cancelled: " + result.cancelled);
+                console.log(result.text);
                 getData(result.text);
             }, function(error) {
                 alert("Scanning failed: " + error);
@@ -25,10 +26,12 @@
 
       }
         function getData(id) {
+                console.log("run function");
               $.ajax({
                 url: 'http://b2b.webili.ir/web_service/get_data/?action=test&id='+id,
                 data: {},
                 success: function(data) {
+                console.log("success " + data);
                 alert(data);
                 },
                 error: function (xhr, ajaxOptions, thrownError) {

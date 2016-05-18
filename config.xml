@@ -13,7 +13,7 @@
     <plugin name="cordova-plugin-console" source="npm"/>
     <plugin name="cordova-plugin-dialogs" source="npm"/>
     <plugin name="phonegap-plugin-barcodescanner" source="npm"/>
-    <access origin="*" />
+    <access origin="*"  subdomains="true"/>
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />

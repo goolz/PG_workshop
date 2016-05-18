@@ -44,20 +44,7 @@
     <allow-intent href="geo:*" />
     <allow-intent href="itms:*" />
     <allow-intent href="itms-apps:*" />
-    <config-file parent="NSAppTransportSecurity" target="*-Info.plist">
-        <array>
-            <dict>
-                <key>b2b.webili.ir</key>
-                <dict>
-                    <key>NSIncludesSubdomains</key>
-                    <key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
-                    <true />
-                    <key>NSTemporaryExceptionMinimumTLSVersion</key>
-                    <string>TLSv1.1</string>
-                </dict>
-            </dict>
-        </array>
-    </config-file>
+    <allow-navigation href="*" />
     <preference name="AllowInlineMediaPlayback" value="false" />
     <preference name="BackupWebStorage" value="cloud" />
     <preference name="DisallowOverscroll" value="false" />

@@ -1,0 +1,10 @@
+{
+  "name": "mobi.monaca.plugins.BarcodeScanner",
+  "version": "1.0.1",
+  "description": "This plugin allows using camera on device as a barcode scanner",
+  "author": "Monaca Team",
+  "license": "COPYRIGHT ASIAL CORPORATION",
+  "publishConfig": {
+    "registry": "http://registry.monaca.io:4873"
+  }
+}

@@ -24,7 +24,7 @@
     <feature name="Notification">
         <param name="ios-package" value="CDVNotification" />
     </feature>
-    <feature name="BarcodeScanner">
+    <feature name="org.apache.cordova.barcodeScanner">
         <param name="ios-package" value="CDVBarcodeScanner" />
     </feature>
     <name>Workshop</name>

@@ -31,20 +31,21 @@
         "is_top_level": true,
         "variables": {}
     },
-    "phonegap-plugin-barcodescanner": {
-        "source": {
-            "type": "registry",
-            "id": "phonegap-plugin-barcodescanner"
-        },
-        "is_top_level": true,
-        "variables": {}
-    },
     "cordova-plugin-compat": {
         "source": {
             "type": "registry",
             "id": "cordova-plugin-compat"
         },
         "is_top_level": false,
+        "variables": {}
+    },
+    "mobi.monaca.plugins.BarcodeScanner": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/monaca-plugins/mobi.monaca.plugins.BarcodeScanner",
+            "subdir": "."
+        },
+        "is_top_level": true,
         "variables": {}
     }
 }

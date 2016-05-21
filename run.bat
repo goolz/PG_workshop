@@ -1,14 +1,12 @@
 @echo off
 
 echo #################################
-echo Remove Platforms
+echo Build for browser
 echo #################################
 call cordova platforms remove browser
-echo browser has been removed
+call cordova platforms add browser
 timeout 1
 echo #################################
-echo Add Platforms
+echo Start Browser
 echo #################################
-call cordova platforms add browser
-echo browser has been added
 call cordova run browser

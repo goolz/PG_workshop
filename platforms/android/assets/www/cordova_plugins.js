@@ -22,10 +22,10 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/phonegap-plugin-barcodescanner/www/barcodescanner.js",
-        "id": "phonegap-plugin-barcodescanner.BarcodeScanner",
+        "file": "plugins/mobi.monaca.plugins.BarcodeScanner/www/android/barcodeScanner.js",
+        "id": "mobi.monaca.plugins.BarcodeScanner.BarcodeScanner",
         "clobbers": [
-            "cordova.plugins.barcodeScanner"
+            "plugins.barcodeScanner"
         ]
     }
 ];
@@ -37,7 +37,7 @@ module.exports.metadata =
     "cordova-plugin-device": "1.1.2",
     "cordova-plugin-dialogs": "1.2.1",
     "cordova-plugin-whitelist": "1.2.2",
-    "phonegap-plugin-barcodescanner": "5.0.0"
+    "mobi.monaca.plugins.BarcodeScanner": "1.0.1"
 };
 // BOTTOM OF METADATA
 });

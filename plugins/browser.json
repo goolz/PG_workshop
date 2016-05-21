@@ -19,7 +19,7 @@
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.keyvan.workshop"
         },
-        "phonegap-plugin-barcodescanner": {
+        "mobi.monaca.plugins.BarcodeScanner": {
             "PACKAGE_NAME": "com.keyvan.workshop"
         }
     },

@@ -42,7 +42,7 @@
     "mobi.monaca.plugins.BarcodeScanner": {
         "source": {
             "type": "git",
-            "url": "https://github.com/monaca-plugins/mobi.monaca.plugins.BarcodeScanner",
+            "url": "https://github.com/monaca-plugins/mobi.monaca.plugins.BarcodeScanner.git",
             "subdir": "."
         },
         "is_top_level": true,

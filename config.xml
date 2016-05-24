@@ -12,7 +12,7 @@
     <plugin name="cordova-plugin-device" source="npm"/>
     <plugin name="cordova-plugin-console" source="npm"/>
     <plugin name="cordova-plugin-dialogs" source="npm"/>
-    <plugin name="com.asapsystems.barcodemin" source="npm"/>
+    <plugin name="https://github.com/ASAPWebTeam/barcodemin.git" source="git"/>
 <!--    <plugin spec="https://github.com/monaca-plugins/mobi.monaca.plugins.BarcodeScanner.git" source="git" />-->
     <access origin="*"  subdomains="true"/>
     <allow-intent href="http://*/*" />

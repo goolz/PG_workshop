@@ -39,11 +39,10 @@
         "is_top_level": false,
         "variables": {}
     },
-    "mobi.monaca.plugins.BarcodeScanner": {
+    "com.asapsystems.barcodemin": {
         "source": {
-            "type": "git",
-            "url": "https://github.com/monaca-plugins/mobi.monaca.plugins.BarcodeScanner.git",
-            "subdir": "."
+            "type": "registry",
+            "id": "barcodemin"
         },
         "is_top_level": true,
         "variables": {}

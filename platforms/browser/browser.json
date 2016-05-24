@@ -18,6 +18,9 @@
         }
     },
     "installed_plugins": {
+        "com.asapsystems.barcodemin": {
+            "PACKAGE_NAME": "com.keyvan.workshop"
+        },
         "cordova-plugin-compat": {
             "PACKAGE_NAME": "com.keyvan.workshop"
         },
@@ -32,13 +35,18 @@
         },
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.keyvan.workshop"
-        },
-        "mobi.monaca.plugins.BarcodeScanner": {
-            "PACKAGE_NAME": "com.keyvan.workshop"
         }
     },
     "dependent_plugins": {},
     "modules": [
+        {
+            "file": "plugins/com.asapsystems.barcodemin/www/BarcodeminCDV.js",
+            "id": "com.asapsystems.barcodemin.BarcodeminCDV",
+            "pluginId": "com.asapsystems.barcodemin",
+            "clobbers": [
+                "barcodemin"
+            ]
+        },
         {
             "file": "plugins/cordova-plugin-device/www/device.js",
             "id": "cordova-plugin-device.device",
@@ -71,11 +79,11 @@
         }
     ],
     "plugin_metadata": {
+        "com.asapsystems.barcodemin": "0.1.5",
         "cordova-plugin-compat": "1.0.0",
         "cordova-plugin-console": "1.0.3",
         "cordova-plugin-device": "1.1.2",
         "cordova-plugin-dialogs": "1.2.1",
-        "cordova-plugin-whitelist": "1.2.2",
-        "mobi.monaca.plugins.BarcodeScanner": "1.0.1"
+        "cordova-plugin-whitelist": "1.2.2"
     }
 }

@@ -11,11 +11,11 @@
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <script type="text/javascript">
       function scanBarcode() {
-        cordova.plugins.barcodeScanner.scan( function(result) {
+         barcodemin.scanBarcode( function(result) {
                 alert("We got a barcode\n" +
-                          "Result: " + result.text + "\n" +
-                          "Format: " + result.format + "\n" +
-                          "Cancelled: " + result.cancelled);
+                          "Result: " + result + "\n" +
+                          "Format: " + result + "\n" +
+                          "Cancelled: " + result);
                 console.log(result.text);
                 getData(result.text);
             }, function(error) {

@@ -7,6 +7,9 @@
         "files": {}
     },
     "installed_plugins": {
+        "com.asapsystems.barcodemin": {
+            "PACKAGE_NAME": "com.keyvan.workshop"
+        },
         "cordova-plugin-console": {
             "PACKAGE_NAME": "com.keyvan.workshop"
         },
@@ -17,9 +20,6 @@
             "PACKAGE_NAME": "com.keyvan.workshop"
         },
         "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "com.keyvan.workshop"
-        },
-        "mobi.monaca.plugins.BarcodeScanner": {
             "PACKAGE_NAME": "com.keyvan.workshop"
         }
     },

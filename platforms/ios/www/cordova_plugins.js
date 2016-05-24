@@ -1,6 +1,14 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
 module.exports = [
     {
+        "file": "plugins/com.asapsystems.barcodemin/www/BarcodeminCDV.js",
+        "id": "com.asapsystems.barcodemin.BarcodeminCDV",
+        "pluginId": "com.asapsystems.barcodemin",
+        "clobbers": [
+            "barcodemin"
+        ]
+    },
+    {
         "file": "plugins/cordova-plugin-console/www/console-via-logger.js",
         "id": "cordova-plugin-console.console",
         "pluginId": "cordova-plugin-console",
@@ -31,25 +39,17 @@ module.exports = [
         "merges": [
             "navigator.notification"
         ]
-    },
-    {
-        "file": "plugins/mobi.monaca.plugins.BarcodeScanner/www/ios/barcodeScanner.js",
-        "id": "mobi.monaca.plugins.BarcodeScanner.BarcodeScanner",
-        "pluginId": "mobi.monaca.plugins.BarcodeScanner",
-        "clobbers": [
-            "plugins.barcodeScanner"
-        ]
     }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
+    "com.asapsystems.barcodemin": "0.1.5",
     "cordova-plugin-compat": "1.0.0",
     "cordova-plugin-console": "1.0.3",
     "cordova-plugin-device": "1.1.2",
     "cordova-plugin-dialogs": "1.2.1",
-    "cordova-plugin-whitelist": "1.2.2",
-    "mobi.monaca.plugins.BarcodeScanner": "1.0.1"
+    "cordova-plugin-whitelist": "1.2.2"
 }
 // BOTTOM OF METADATA
 });

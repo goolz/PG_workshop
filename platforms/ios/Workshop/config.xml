@@ -15,6 +15,9 @@
         <param name="ios-package" value="CDVGestureHandler" />
         <param name="onload" value="true" />
     </feature>
+    <feature name="BarcodeminCDV">
+        <param name="ios-package" value="BarcodeminCDV" />
+    </feature>
     <feature name="Console">
         <param name="ios-package" value="CDVLogger" />
     </feature>
@@ -23,9 +26,6 @@
     </feature>
     <feature name="Notification">
         <param name="ios-package" value="CDVNotification" />
-    </feature>
-    <feature name="org.apache.cordova.barcodeScanner">
-        <param name="ios-package" value="CDVBarcodeScanner" />
     </feature>
     <name>Workshop</name>
     <description>

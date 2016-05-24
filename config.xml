@@ -23,6 +23,7 @@
     <allow-intent href="geo:*" />
     <allow-navigation href="*" />
     <platform name="android">
+        <preference name="android-build-tool" value="gradle" />
         <allow-intent href="market:*" />
         <allow-navigation href="*" />
     </platform>

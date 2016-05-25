@@ -12,9 +12,9 @@
     <script type="text/javascript">
       function scanBarcode() {
          barcodemin.scanBarcode( function(result) {
-                console.log("barcod id = " + result.text);
+                console.log("barcod id = " + result);
                 console.log("result = " + result);
-                getData(result.text);
+                getData(result);
             }, function(error) {
                 alert("Scanning failed: " + error);
             }

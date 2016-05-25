@@ -13,6 +13,7 @@
       function scanBarcode() {
          barcodemin.scanBarcode( function(result) {
                 console.log("barcod id = " + result.text);
+                console.log("result = " + result);
                 getData(result.text);
             }, function(error) {
                 alert("Scanning failed: " + error);
@@ -32,7 +33,7 @@
                     console.log("success " + r);
                     //alert(data[0].name);
                     var htresult = '<table><tr><td><img height="200px" width="200px" id="theImg" src="'+data[0].image_url+'" /></td></tr><tr><td>Name:'+data[0].name+'</td></tr><tr><td>Mobile:'+data[0].mobile+'</td></tr></table>';
-                    $('#result').prepend(htresult);
+                    $('#resultDiv').prepend(htresult);
                 },
                 error: function (xhr, ajaxOptions, thrownError) {
                     alert(xhr.status);
@@ -47,6 +48,6 @@
     <hr> BarcodeReader DEMO <hr><br>
     <input type="button" onClick ="scanBarcode()" value ="Scan" />
     <input type="button" onClick ="getData(6910333665)" value ="Ajax" />
-    <div name="result" id ="result"></div>
+    <div name="resultDiv" id ="resultDiv"></div>
   </body>
   </html>

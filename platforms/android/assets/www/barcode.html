@@ -12,10 +12,6 @@
     <script type="text/javascript">
       function scanBarcode() {
          barcodemin.scanBarcode( function(result) {
-                alert("We got a barcode\n" +
-                          "Result: " + result + "\n" +
-                          "Format: " + result + "\n" +
-                          "Cancelled: " + result);
                 console.log(result.text);
                 getData(result.text);
             }, function(error) {
@@ -31,8 +27,11 @@
                 url: 'http://b2b.webili.ir/web_service/get_data/?action=test&id='+id,
                 data: {},
                 success: function(data) {
-                    console.log("success " + data);
-                    alert(data);
+                    var r = JSON.stringify(data);
+                    console.log("success " + r);
+                    //alert(data[0].name);
+                    var htresult = '<table><tr><td><img height="200px" width="200px" id="theImg" src="'+data[0].image_url+'" /></td></tr><tr><td>Name:'+data[0].name+'</td></tr><tr><td>Mobile:'+data[0].mobile+'</td></tr></table>';
+                    $('#result').prepend(htresult);
                 },
                 error: function (xhr, ajaxOptions, thrownError) {
                     alert(xhr.status);
@@ -46,6 +45,7 @@
   <body>
     <hr> BarcodeReader DEMO <hr><br>
     <input type="button" onClick ="scanBarcode()" value ="Scan" />
-    <input type="button" onClick ="getData(62900737)" value ="Ajax" />
+    <input type="button" onClick ="getData(6910333665)" value ="Ajax" />
+    <div name="result" id ="result"></div>
   </body>
   </html>

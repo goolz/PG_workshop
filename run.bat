@@ -3,8 +3,7 @@
 echo #################################
 echo Build for browser
 echo #################################
-call cordova platforms remove browser
-call cordova platforms add browser
+call cordova platforms update browser
 timeout 1
 echo #################################
 echo Start Browser

@@ -11,6 +11,7 @@
         <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
         <param name="onload" value="true" />
     </feature>
+    <preference name="android-build-tool" value="gradle" />
     <allow-intent href="market:*" />
     <name>Workshop</name>
     <description>

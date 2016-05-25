@@ -12,7 +12,7 @@
     <script type="text/javascript">
       function scanBarcode() {
          barcodemin.scanBarcode( function(result) {
-                console.log(result.text);
+                console.log("barcod id = " + result.text);
                 getData(result.text);
             }, function(error) {
                 alert("Scanning failed: " + error);
@@ -27,6 +27,7 @@
                 url: 'http://b2b.webili.ir/web_service/get_data/?action=test&id='+id,
                 data: {},
                 success: function(data) {
+                    console.log("geting data ...");
                     var r = JSON.stringify(data);
                     console.log("success " + r);
                     //alert(data[0].name);

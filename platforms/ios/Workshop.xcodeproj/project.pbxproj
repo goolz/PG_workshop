@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		0207DA581B56EA530066E2B4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0207DA571B56EA530066E2B4 /* Images.xcassets */; };
 		1D3623260D0F684500981E51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.m */; };
@@ -16,6 +15,20 @@
 		3047A5121AB8059700498E2A /* build-debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3047A50F1AB8059700498E2A /* build-debug.xcconfig */; };
 		3047A5131AB8059700498E2A /* build-release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3047A5101AB8059700498E2A /* build-release.xcconfig */; };
 		3047A5141AB8059700498E2A /* build.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3047A5111AB8059700498E2A /* build.xcconfig */; };
+		1A076198847C4ED6953E10A5 /* BarcodeminCDV.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC74DF91CC14950ACF6AED3 /* BarcodeminCDV.m */; };
+		C5EB4CA023514A9C8EC985CE /* barcodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE6D89BF2D445A1A32D605A /* barcodeViewController.m */; };
+		D77B1755A13A4B3791D77B34 /* barcodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 860457D548514943BF4122C5 /* barcodeViewController.xib */; };
+		80F7EFB8AC2C48AEBA62BE5D /* flip.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F820F2437C34853AA920EDA /* flip.png */; };
+		14D85DF6AA7740C3A1B6BFE5 /* flip@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EF35874B8A4AEB99FB256A /* flip@2x.png */; };
+		B74269968FB54E9C96BEF8E6 /* beep.caf in Resources */ = {isa = PBXBuildFile; fileRef = D9C86B030DEF4EB4AEBA0EAF /* beep.caf */; };
+		43B7401AAD314592AA849792 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37079194AB1C4156A6CCBDC0 /* AVFoundation.framework */; };
+		2739351828EA4AA6A31E1C3A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44B10A1C5DB149C6A31A2EBA /* UIKit.framework */; };
+		760281A343CD40FCB5FF747E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F73F57503404A99B6EC8962 /* QuartzCore.framework */; };
+		7AAC771ABD26457186086F52 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CBB488AA8674733881D7943 /* AudioToolbox.framework */; };
+		D769C9BCE7294CF7A9FDFEFA /* CDVLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AECFCBEE1E48B19D457CBB /* CDVLogger.m */; };
+		FDB533F5339F4C538EC77B1A /* CDVDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 5075E7F5C39F42D9998712C5 /* CDVDevice.m */; };
+		C3909FEA08DE4929B5F59253 /* CDVNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = C4091069417C47D3819A1119 /* CDVNotification.m */; };
+		0843C882E2194DEC90E6A854 /* CDVNotification.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 27EE6149AB4347FEAB7FAF51 /* CDVNotification.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +68,25 @@
 		EB87FDF41871DAF40020F90C /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = ../../config.xml; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = "Workshop/config.xml"; sourceTree = "<group>"; };
 		ED33DF2A687741AEAF9F8254 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		5AC74DF91CC14950ACF6AED3 /* BarcodeminCDV.m */ = {isa = PBXFileReference; name = "BarcodeminCDV.m"; path = "com.asapsystems.barcodemin/BarcodeminCDV.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		ABE6D89BF2D445A1A32D605A /* barcodeViewController.m */ = {isa = PBXFileReference; name = "barcodeViewController.m"; path = "com.asapsystems.barcodemin/barcodeViewController.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		54A67FB42B69458BBF1E7727 /* barcodeViewController.h */ = {isa = PBXFileReference; name = "barcodeViewController.h"; path = "com.asapsystems.barcodemin/barcodeViewController.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		C48ADE51E5304D24AAF4B9D5 /* BarcodeminCDV.h */ = {isa = PBXFileReference; name = "BarcodeminCDV.h"; path = "com.asapsystems.barcodemin/BarcodeminCDV.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		860457D548514943BF4122C5 /* barcodeViewController.xib */ = {isa = PBXFileReference; name = "barcodeViewController.xib"; path = "barcodeViewController.xib"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = file.xib; explicitFileType = undefined; includeInIndex = 0; };
+		7F820F2437C34853AA920EDA /* flip.png */ = {isa = PBXFileReference; name = "flip.png"; path = "flip.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		17EF35874B8A4AEB99FB256A /* flip@2x.png */ = {isa = PBXFileReference; name = "flip@2x.png"; path = "flip@2x.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D9C86B030DEF4EB4AEBA0EAF /* beep.caf */ = {isa = PBXFileReference; name = "beep.caf"; path = "beep.caf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		37079194AB1C4156A6CCBDC0 /* AVFoundation.framework */ = {isa = PBXFileReference; name = "AVFoundation.framework"; path = "System/Library/Frameworks/AVFoundation.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		44B10A1C5DB149C6A31A2EBA /* UIKit.framework */ = {isa = PBXFileReference; name = "UIKit.framework"; path = "System/Library/Frameworks/UIKit.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		4F73F57503404A99B6EC8962 /* QuartzCore.framework */ = {isa = PBXFileReference; name = "QuartzCore.framework"; path = "System/Library/Frameworks/QuartzCore.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		9CBB488AA8674733881D7943 /* AudioToolbox.framework */ = {isa = PBXFileReference; name = "AudioToolbox.framework"; path = "System/Library/Frameworks/AudioToolbox.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		D5AECFCBEE1E48B19D457CBB /* CDVLogger.m */ = {isa = PBXFileReference; name = "CDVLogger.m"; path = "cordova-plugin-console/CDVLogger.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		CFDD9F45C7344036B6EEC738 /* CDVLogger.h */ = {isa = PBXFileReference; name = "CDVLogger.h"; path = "cordova-plugin-console/CDVLogger.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		5075E7F5C39F42D9998712C5 /* CDVDevice.m */ = {isa = PBXFileReference; name = "CDVDevice.m"; path = "cordova-plugin-device/CDVDevice.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		331904BE9B714CD1B895B726 /* CDVDevice.h */ = {isa = PBXFileReference; name = "CDVDevice.h"; path = "cordova-plugin-device/CDVDevice.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		C4091069417C47D3819A1119 /* CDVNotification.m */ = {isa = PBXFileReference; name = "CDVNotification.m"; path = "cordova-plugin-dialogs/CDVNotification.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		D935F6BF0F384A9A81C86B72 /* CDVNotification.h */ = {isa = PBXFileReference; name = "CDVNotification.h"; path = "cordova-plugin-dialogs/CDVNotification.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		27EE6149AB4347FEAB7FAF51 /* CDVNotification.bundle */ = {isa = PBXFileReference; name = "CDVNotification.bundle"; path = "CDVNotification.bundle"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.plug-in; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +95,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
+				43B7401AAD314592AA849792 /* AVFoundation.framework in Frameworks */,
+				2739351828EA4AA6A31E1C3A /* UIKit.framework in Frameworks */,
+				760281A343CD40FCB5FF747E /* QuartzCore.framework in Frameworks */,
+				7AAC771ABD26457186086F52 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +160,11 @@
 				0207DA571B56EA530066E2B4 /* Images.xcassets */,
 				3047A50E1AB8057F00498E2A /* config */,
 				8D1107310486CEB800E47090 /* Workshop-Info.plist */,
+				860457D548514943BF4122C5 /* barcodeViewController.xib */,
+				7F820F2437C34853AA920EDA /* flip.png */,
+				17EF35874B8A4AEB99FB256A /* flip@2x.png */,
+				D9C86B030DEF4EB4AEBA0EAF /* beep.caf */,
+				27EE6149AB4347FEAB7FAF51 /* CDVNotification.bundle */,
 			);
 			name = Resources;
 			path = "Workshop/Resources";
@@ -132,6 +173,10 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				37079194AB1C4156A6CCBDC0 /* AVFoundation.framework */,
+				44B10A1C5DB149C6A31A2EBA /* UIKit.framework */,
+				4F73F57503404A99B6EC8962 /* QuartzCore.framework */,
+				9CBB488AA8674733881D7943 /* AudioToolbox.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -157,6 +202,16 @@
 		307C750510C5A3420062BCA9 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
+				5AC74DF91CC14950ACF6AED3 /* BarcodeminCDV.m */,
+				ABE6D89BF2D445A1A32D605A /* barcodeViewController.m */,
+				54A67FB42B69458BBF1E7727 /* barcodeViewController.h */,
+				C48ADE51E5304D24AAF4B9D5 /* BarcodeminCDV.h */,
+				D5AECFCBEE1E48B19D457CBB /* CDVLogger.m */,
+				CFDD9F45C7344036B6EEC738 /* CDVLogger.h */,
+				5075E7F5C39F42D9998712C5 /* CDVDevice.m */,
+				331904BE9B714CD1B895B726 /* CDVDevice.h */,
+				C4091069417C47D3819A1119 /* CDVNotification.m */,
+				D935F6BF0F384A9A81C86B72 /* CDVNotification.h */,
 			);
 			name = Plugins;
 			path = "Workshop/Plugins";
@@ -199,7 +254,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 510;
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "__NON-CLI__" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -240,6 +295,11 @@
 				3047A5141AB8059700498E2A /* build.xcconfig in Resources */,
 				0207DA581B56EA530066E2B4 /* Images.xcassets in Resources */,
 				3047A5121AB8059700498E2A /* build-debug.xcconfig in Resources */,
+				D77B1755A13A4B3791D77B34 /* barcodeViewController.xib in Resources */,
+				80F7EFB8AC2C48AEBA62BE5D /* flip.png in Resources */,
+				14D85DF6AA7740C3A1B6BFE5 /* flip@2x.png in Resources */,
+				B74269968FB54E9C96BEF8E6 /* beep.caf in Resources */,
+				0843C882E2194DEC90E6A854 /* CDVNotification.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +331,11 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
+				1A076198847C4ED6953E10A5 /* BarcodeminCDV.m in Sources */,
+				C5EB4CA023514A9C8EC985CE /* barcodeViewController.m in Sources */,
+				D769C9BCE7294CF7A9FDFEFA /* CDVLogger.m in Sources */,
+				FDB533F5339F4C538EC77B1A /* CDVDevice.m in Sources */,
+				C3909FEA08DE4929B5F59253 /* CDVNotification.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

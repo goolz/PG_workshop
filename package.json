@@ -1,8 +1,13 @@
 {
-    "repository": {
+  "repository": {
     "type": "git",
-    "url": "https://github.com/goolz/PG_workshop.git"},
-    "description": "Test phonegap mobile app",
-    "readme": "README.md",
-    "license": "Apache-2.0"
+    "url": "https://github.com/goolz/PG_workshop.git"
+  },
+  "description": "Test phonegap mobile app",
+  "readme": "README.md",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "onsenui": "^2.0.0-rc.6",
+    "react-onsenui": "^0.2.10"
+  }
 }

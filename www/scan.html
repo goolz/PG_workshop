@@ -1,0 +1,110 @@
+  <ons-page>
+    <ons-toolbar>
+        <div class="left"><ons-back-button>Back</ons-back-button></div>
+      <div class="center">Scan</div>
+        <div class="right">
+          <ons-toolbar-button>
+            <ons-icon icon="fa-qrcode"  onclick="scanBarcode()"></ons-icon>
+          </ons-toolbar-button>
+        </div>
+    </ons-toolbar>
+<!--      <ons-button id="ajax-button" onclick="getData(6910333665)">Ajax check</ons-button>-->
+      <div name="resultDiv" id ="resultDiv"></div>
+  <div class="card">
+    <div class="transbox">
+        <div class="card-name">{{company.name}}</div>
+        <div class="card-desc">{{company.industry}}</div>
+    </div>
+  </div>
+
+  <ons-list style="border-top: none"><ons-list-item style="line-height: 1; padding: 0;">
+    <ons-row class="action">
+
+      <ons-col class="action-col">
+        <div class="action-icon" id="btnRate" ng-click="show('#btnRate')"><ons-icon icon="ion-ios-star-half"></ons-icon></div>
+        <div class="action-label" id="lblRate" ng-click="show('#lblRate')">Rate</div>
+      </ons-col>
+
+      <ons-col class="action-col">
+        <div class="action-icon" ng-click="addFavorite()" id="favIcon" style="{{isInFav}}"><ons-icon icon="ion-bookmark"></ons-icon></div>
+        <div class="action-label" ng-click="addFavorite()" id="favName" style="{{isInFav}}">Favorite</div>
+      </ons-col>
+
+      <ons-col class="action-col">
+        <div class="action-icon" id="btnShare" ng-click="ssharing();"><ons-icon icon="ion-share"></ons-icon></div>
+        <div class="action-label" id="lblShare" ng-click="ssharing();">Share</div>
+      </ons-col>
+
+      <ons-col class="action-col">
+        <div class="action-icon" id="btnReports" ng-click="open3w();"><ons-icon icon="ion-android-list"></ons-icon></div>
+        <div class="action-label" id="lblReports" ng-click="open3w();">Reports</div>
+      </ons-col>
+
+    </ons-row>
+  </ons-list-item></ons-list>
+
+  <ons-list>
+  
+    <ons-list-item>
+      <div class="prop-desc">
+        <ons-icon icon="ion-ios-star"></ons-icon>
+        Rate: {{Srate}} <small>- based on ICCIMA Rating Program</small>
+      </div>
+    </ons-list-item>
+    
+    <ons-list-item>
+      <div class="prop-desc">
+        <ons-icon icon="fa-user"></ons-icon>
+        CEO: {{company.manager}}
+      </div>
+    </ons-list-item>
+    
+    <ons-list-item>
+      <div class="prop-desc">
+        <ons-icon icon="fa-map-marker"></ons-icon>
+        Province: {{company.state}}
+      </div>
+    </ons-list-item>
+
+    <ons-list-item>
+      <div class="prop-desc">
+        <ons-icon icon="fa-phone"></ons-icon>
+        Tel: <a href="#" ng-click="opentel()">{{company.tel}}</a>
+      </div>
+    </ons-list-item>
+
+    <ons-list-item>
+      <div class="prop-desc">
+        <ons-icon icon="fa-print"></ons-icon>
+        Fax: {{company.fax}}
+      </div>
+    </ons-list-item>
+
+    <ons-list-item>
+      <div class="prop-desc">
+        <ons-icon icon="fa-dollar"></ons-icon>
+        Capital: ${{company.registeredCapital}}
+      </div>
+    </ons-list-item>
+    <ons-list-item>
+      <div class="prop-desc">
+        <ons-icon icon="fa-gears"></ons-icon>
+         Activities: {{company.activityType}}
+      </div>
+    </ons-list-item>
+
+    <ons-list-item>
+      <div class="prop-desc">
+        <ons-icon icon="fa-globe"></ons-icon>
+        Web: <a href="#" ng-click="openweb()">{{company.website}}</a>
+      </div>
+    </ons-list-item>
+    <ons-list-item>
+      <div class="prop-desc">
+        <ons-icon icon="fa-envelope"></ons-icon>
+        Email: <a href="#" ng-click="sendmail()">{{company.email}}</a>
+      </div>
+    </ons-list-item>
+  </ons-list>
+
+</ons-page>

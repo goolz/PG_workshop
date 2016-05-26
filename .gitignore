@@ -3,3 +3,7 @@ browser
 /platforms/browser
 /platforms/android
 /platforms
+/www/cordova.js
+/www/exec.js
+/www/confighelper.js
+/www/cordova_plugins.js

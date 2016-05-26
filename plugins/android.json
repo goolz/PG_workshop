@@ -10,6 +10,9 @@
         "com.asapsystems.barcodemin": {
             "PACKAGE_NAME": "com.keyvan.workshop"
         },
+        "cordova-plugin-browsersync": {
+            "PACKAGE_NAME": "com.keyvan.workshop"
+        },
         "cordova-plugin-console": {
             "PACKAGE_NAME": "com.keyvan.workshop"
         },

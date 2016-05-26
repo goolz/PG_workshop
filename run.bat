@@ -8,4 +8,4 @@ timeout 1
 echo #################################
 echo Start Browser
 echo #################################
-call cordova run browser
+call cordova run browser  --livereload

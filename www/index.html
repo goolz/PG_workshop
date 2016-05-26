@@ -27,7 +27,11 @@
 
               function scanBarcode() {
                             //$(".card").css('background-image','url(http://b2b.webili.ir/wp-content/uploads/2016/02/b2b_imageProduct_FB_IMG_1453185258596.jpg)');
+                  
+                        //getData(6910333665);
                  barcodemin.scanBarcode( function(result) {
+                     
+                        scanmodal.show({animation:"fade"});
                         console.log("barcod id = " + result);
                         console.log("result = " + result);
                         getData(result);
@@ -51,11 +55,15 @@
                             //var htresult = '<table><tr><td><img height="200px" width="200px" id="theImg" src="'+data[0].image_url+'" /></td></tr><tr><td>Name:'+data[0].name+'</td></tr><tr><td>Mobile:'+data[0].mobile+'</td></tr></table>';
                             //$('#resultDiv').prepend(htresult);
                             $(".card").css('background-image',"url("+data[0].image_url+")");
+                            $("#name").html(data[0].name);
+                            $("#mobile").text(data[0].mobile);
                         },
                         error: function (xhr, ajaxOptions, thrownError) {
                             ons.notification.alert(xhr.status + " " + thrownError);
                             }
                     })
+                  
+            scanmodal.hide({animation:"fade"});
               }
         
         var login = function() {

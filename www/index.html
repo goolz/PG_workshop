@@ -9,7 +9,7 @@
     <script src="cordova.js"></script>
     <script>
       ons.ready(function() {
-          var button = document.getElementById('push-button');
+          //var button = document.getElementById('push-button');
           var myNavigator = document.getElementById('myNavigator');
 
           myNavigator.addEventListener('init', function(event) {
@@ -19,11 +19,11 @@
             }
           });
 
-          button.onclick = function() {
-            myNavigator.pushPage('page2.html', {data: {title: 'Page 2'}});
-          };
+          //button.onclick = function() {
+          //  myNavigator.pushPage('page2.html', {data: {title: 'Page 2'}});
+          //};
         });
-        
+
               function scanBarcode() {
                  barcodemin.scanBarcode( function(result) {
                         console.log("barcod id = " + result);
@@ -50,33 +50,58 @@
                             $('#resultDiv').prepend(htresult);
                         },
                         error: function (xhr, ajaxOptions, thrownError) {
-                            alert(xhr.status);
-                            alert(thrownError);
+                            ons.notification.alert(xhr.status + " " + thrownError);
                             }
                     })
               }
         
+        var login = function() {
+          var email = document.getElementById('email').value;
+          var password = document.getElementById('password').value;
+          var myNavigator = document.getElementById('myNavigator');
+          $.ajax({
+            url: 'http://b2b.webili.ir/web_service/get_data/?action=auth&email='+email+'&password='+password,
+            data: {},
+            success: function(data) {
+                console.log("geting data ...");
+                var r = JSON.stringify(data);
+                console.log("success " + r);
+                //alert(data[0].name);
+                if (data=="1") myNavigator.pushPage('page2.html', {data: {title: 'Page 2'}});
+                else ons.notification.alert(data);
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                 ons.notification.alert(xhr.status + " " + thrownError);
+                }
+        })
+        };
+
     </script>
   </head>
   <body>
 <ons-navigator id="myNavigator" page="page1.html"></ons-navigator>
-
 <ons-template id="page1.html">
   <ons-page>
     <ons-toolbar>
-      <div class="center">Page 1</div>
+      <div class="center">Login</div>
     </ons-toolbar>
-
-    <p>This is the first page.</p>
-
-    <ons-button id="push-button">Push page</ons-button>
+    <div style="text-align: center; margin-top: 30px;">
+        <p>
+          <ons-input id="email" modifier="underbar" placeholder="Email" float></ons-input>
+        </p>
+        <p>
+          <ons-input id="password" modifier="underbar" type="password" placeholder="Password" float></ons-input>
+        </p>
+        <p style="margin-top: 30px;">
+          <ons-button onclick="login()">Sign in</ons-button>
+        </p>
+    </div>
   </ons-page>
 </ons-template>
 
 <ons-template id="page2.html">
   <ons-page>
     <ons-toolbar>
-      <div class="left"><ons-back-button>Back</ons-back-button></div>
       <div class="center">Page 2</div>
     </ons-toolbar>
       <ons-button id="barcode-button" onclick="scanBarcode()">Scan</ons-button>
@@ -86,71 +111,3 @@
   </ons-page>
 </ons-template>
 </html>
-<!--<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-    <link href="assets/ratchet/css/ratchet.css" rel="stylesheet">
-    <link href="assets/css/styles.css" rel="stylesheet">
-</head>
-<body>
-    
-    <a class="button--large" href="barcode.html">Barcode Demo</a>
-    <script id="home-tpl" type="text/template">
-        <header class="bar bar-nav">
-            <h1 class="title">Directory</h1>
-        </header>
-        <div class="bar bar-standard bar-header-secondary">
-            <input class='search-key' type="search"/>
-        </div>
-        <div class="content"></div>
-    </script>
-    <script id="employee-list-tpl" type="text/template">
-        <ul class="table-view">
-            {{#each this}}
-            <li class="table-view-cell media">
-                <a href="#employees/{{ id }}">
-                    <img class="media-object pull-left" src="assets/pics/{{pic}}">
-                    <div class="media-body">
-                        {{firstName}} {{lastName}}
-                        <p>{{title}}</p>
-                    </div>
-                </a>
-            </li>
-            {{/each}}
-        </ul>
-    </script>
-
-    <script src="lib/jquery.js"></script>
-    <script src="js/services/memory/EmployeeService.js"></script>
-    <script src="js/app.js"></script>
-    <script src="cordova.js"></script>
-    <script src="lib/fastclick.js"></script>
-    <script src="lib/handlebars.js"></script>
-</body>
-</html>
-<!DOCTYPE HTML>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <link href="assets/ratchet/css/ratchet.css" rel="stylesheet">
-    <link href="assets/css/styles.css" rel="stylesheet">
-    <script>
-        // PhoneGap event handler
-        document.addEventListener("deviceready", onDeviceReady, false);
-        function onDeviceReady() {
-            console.log("PhoneGap is ready");
-        }
-    </script>
-</head>
-<body>
-
-    <h1>Welcome to Monaca!</h1>
-    <a class="button--large" href="barcode.html">Barcode Demo</a>
-    
-    <script src="js/app.js"></script>
-    <script src="cordova.js"></script>
-</body>
-</html>-->

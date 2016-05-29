@@ -32,11 +32,11 @@
             var button = document.getElementById('push-button');
             var myNavigator = document.getElementById('myNavigator');
 
-            var storage = window.localStorage;
-            var email = storage.getItem("email");
-            var password = storage.getItem("password");
+            //var storage = window.localStorage;            
+            var email = localStorage.getItem("email");
+            var password = localStorage.getItem("password");
             if (password != 'null' && email != 'null') {
-                var chkAuto = storage.getItem("chkAuto");
+                var chkAuto = localStorage.getItem("chkAuto");
                 document.getElementById('email').value = email;
                 document.getElementById('password').value = password;
                 if (chkAuto && isonline) login();
@@ -95,7 +95,7 @@
             var myNavigator = document.getElementById('myNavigator');
             var chkRemem = document.getElementById('chkRemem');
             var chkAuto = document.getElementById('chkAuto');
-            var storage = window.localStorage;
+            //var storage = window.localStorage;
 
             modal.show({ animation: "fade" });
             $.ajax({
@@ -104,15 +104,15 @@
                 success: function (data) {
                     if (data == "1") {
                         if (chkRemem.checked) {
-                            storage.setItem("email", email);
-                            storage.setItem("password", password);
-                            storage.setItem("chkAuto", chkAuto.checked);
+                            localStorage.setItem("email", email);
+                            localStorage.setItem("password", password);
+                            localStorage.setItem("chkAuto", chkAuto.checked);
 
                         }
                         else {
-                            storage.removeItem("email");
-                            storage.removeItem("password");
-                            storage.removeItem("chkAuto");
+                            localStorage.removeItem("email");
+                            localStorage.removeItem("password");
+                            localStorage.removeItem("chkAuto");
                         }
                         myNavigator.pushPage('scan.html', { data: { title: 'Scan' } });
                     }

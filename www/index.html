@@ -110,9 +110,7 @@
 
                         }
                         else {
-                            localStorage.removeItem("email");
-                            localStorage.removeItem("password");
-                            localStorage.removeItem("chkAuto");
+                            localStorage.clear();
                         }
                         myNavigator.pushPage('scan.html', { data: { title: 'Scan' } });
                     }

@@ -1,34 +1,35 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.keyvan.workshop" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Workshop</name>
-    <description>
-        A sample Apache Cordova application that responds to the deviceready event. by keyvan mon
-    </description>
-    <author email="k1m@ipcgroup.ir" href="http://www.ipcgroup.ir">
-        Keyvan Mon
-    </author>
-    <content src="index.html" />
-    <plugin name="cordova-plugin-whitelist" spec="1" />
-    <plugin name="cordova-plugin-device" source="npm"/>
-    <plugin name="cordova-plugin-console" source="npm"/>
-    <plugin name="cordova-plugin-dialogs" source="npm"/>
-    <plugin spec="https://github.com/ASAPWebTeam/barcodemin.git" source="git"/>
-    <access origin="*"  subdomains="true"/>
-    <allow-intent href="http://*/*" />
-    <allow-intent href="https://*/*" />
-    <allow-intent href="tel:*" />
-    <allow-intent href="sms:*" />
-    <allow-intent href="mailto:*" />
-    <allow-intent href="geo:*" />
+  <name>Workshop</name>
+  <description>
+    A sample Apache Cordova application that responds to the deviceready event. by keyvan mon
+  </description>
+  <author email="k1m@ipcgroup.ir" href="http://www.ipcgroup.ir">
+    Keyvan Mon
+  </author>
+  <content src="index.html" />
+  <plugin name="cordova-plugin-whitelist" spec="1" />
+  <plugin name="cordova-plugin-device" source="npm"/>
+  <plugin name="cordova-plugin-console" source="npm"/>
+  <plugin name="cordova-plugin-dialogs" source="npm"/>
+  <plugin name="cordova-plugin-nativestorage" source="npm"/>
+  <plugin spec="https://github.com/ASAPWebTeam/barcodemin.git" source="git"/>
+  <access origin="*"  subdomains="true"/>
+  <allow-intent href="http://*/*" />
+  <allow-intent href="https://*/*" />
+  <allow-intent href="tel:*" />
+  <allow-intent href="sms:*" />
+  <allow-intent href="mailto:*" />
+  <allow-intent href="geo:*" />
+  <allow-navigation href="*" />
+  <platform name="android">
+    <preference name="android-build-tool" value="gradle" />
+    <allow-intent href="market:*" />
     <allow-navigation href="*" />
-    <platform name="android">
-        <preference name="android-build-tool" value="gradle" />
-        <allow-intent href="market:*" />
-        <allow-navigation href="*" />
-    </platform>
-    <platform name="ios">
-        <allow-intent href="itms:*" />
-        <allow-intent href="itms-apps:*" />
-        <allow-navigation href="*" />
-    </platform>
+  </platform>
+  <platform name="ios">
+    <allow-intent href="itms:*" />
+    <allow-intent href="itms-apps:*" />
+    <allow-navigation href="*" />
+  </platform>
 </widget>

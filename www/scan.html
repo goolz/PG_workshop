@@ -1,62 +1,67 @@
-  <ons-page>
+<ons-page>
     <ons-toolbar>
         <div class="left"><ons-back-button>Back</ons-back-button></div>
-      <div class="center">Scan</div>
+        <div class="center">Scan</div>
         <div class="right" onclick="scanBarcode()">
-          <ons-toolbar-button>
-            <ons-icon icon="fa-qrcode"  onclick="scanBarcode()"></ons-icon>
-          </ons-toolbar-button>
+            <ons-toolbar-button>
+                <ons-icon icon="fa-qrcode" onclick="scanBarcode()"></ons-icon>
+            </ons-toolbar-button>
         </div>
     </ons-toolbar>
-      <ons-modal id="scanmodal">
-         <ons-icon size="40px" spin icon="md-spinner"></ons-icon>
-        </ons-modal>
-<!--      <ons-button id="ajax-button" onclick="getData(6910333665)">Ajax check</ons-button>-->
-      <div name="resultDiv" id ="resultDiv"></div>
-  <div class="card">
-    <div class="transbox">
+    <ons-modal id="modal-offline2">
+        <ons-icon size="40px" icon="warning"></ons-icon>
+        <div class="center">No Connection</div>
+    </ons-modal>
+    <ons-modal id="scanmodal">
+        <ons-icon size="40px" spin icon="md-spinner"></ons-icon>
+    </ons-modal>
+    <div name="resultDiv" id="resultDiv"></div>
+    <div class="card">
+        <div class="transbox">
+        </div>
     </div>
-  </div>
 
-  <ons-list style="border-top: none"><ons-list-item style="line-height: 1; padding: 0;">
-    <ons-row class="action">
+    <ons-list style="border-top: none">
+        <ons-list-item style="line-height: 1; padding: 0;">
+            <ons-row class="action">
 
-      <ons-col class="action-col">
-        <div class="action-icon" id="btnRate"><ons-icon icon="ion-ios-star"></ons-icon></div>
-        <div class="action-label" id="lblRate">Action</div>
-      </ons-col>
+                <ons-col class="action-col">
+                    <div class="action-icon" id="btnRate"><ons-icon icon="ion-ios-star"></ons-icon></div>
+                    <div class="action-label" id="lblRate">Action</div>
+                </ons-col>
 
-      <ons-col class="action-col">
-        <div class="action-icon" id="favIcon"><ons-icon icon="ion-bookmark"></ons-icon></div>
-        <div class="action-label" id="favName">Favorite</div>
-      </ons-col>
+                <ons-col class="action-col">
+                    <div class="action-icon" id="favIcon"><ons-icon icon="ion-bookmark"></ons-icon></div>
+                    <div class="action-label" id="favName">Favorite</div>
+                </ons-col>
 
-      <ons-col class="action-col">
-        <div class="action-icon" id="btnShare"><ons-icon icon="ion-share"></ons-icon></div>
-        <div class="action-label" id="lblShare">Share</div>
-      </ons-col>
+                <ons-col class="action-col">
+                    <div class="action-icon" id="btnShare"><ons-icon icon="ion-share"></ons-icon></div>
+                    <div class="action-label" id="lblShare">Share</div>
+                </ons-col>
 
-      <ons-col class="action-col">
-        <div class="action-icon" id="btnReports" ><ons-icon icon="ion-android-list"></ons-icon></div>
-        <div class="action-label" id="lblReports">Reports</div>
-      </ons-col>
+                <ons-col class="action-col">
+                    <div class="action-icon" id="btnReports"><ons-icon icon="ion-android-list"></ons-icon></div>
+                    <div class="action-label" id="lblReports">Reports</div>
+                </ons-col>
 
-    </ons-row>
-  </ons-list-item></ons-list>
+            </ons-row>
+        </ons-list-item>
+    </ons-list>
 
-  <ons-list>
-    <ons-list-item>
-      <div class="prop-desc">
-        <ons-icon icon="fa-user"></ons-icon>
-        Name: <div id="name"></div>
-      </div>
-    </ons-list-item>
-    <ons-list-item>
-      <div class="prop-desc">
-        <ons-icon icon="fa-phone"></ons-icon>
-        Mobile: <a href="#" id="mobile" ng-click="opentel()"></a>
-      </div>
-    </ons-list-item>
-  </ons-list>
+    <ons-list>
+        <ons-list-item>
+            <div class="prop-desc">
+                <ons-icon icon="fa-user"></ons-icon>
+                Name: <div id="name"></div>
+            </div>
+        </ons-list-item>
+        <ons-list-item>
+            <div class="prop-desc">
+                <ons-icon icon="fa-phone"></ons-icon>
+                Mobile: <a href="#" id="mobile"></a>
+            </div>
+        </ons-list-item>
+    </ons-list>
 
 </ons-page>

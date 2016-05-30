@@ -12,7 +12,6 @@
   <plugin name="cordova-plugin-device" source="npm"/>
   <plugin name="cordova-plugin-console" source="npm"/>
   <plugin name="cordova-plugin-dialogs" source="npm"/>
-  <plugin name="cordova-plugin-nativestorage" source="npm"/>
   <plugin name="cordova-plugin-network-information" source="npm"/>
   <plugin spec="https://github.com/ASAPWebTeam/barcodemin.git" source="git"/>
   <access origin="*"  subdomains="true"/>

@@ -1,0 +1,18 @@
+﻿<ons-page ng-controller="eventListCtrl">
+    <ons-toolbar>
+        <div class="left"><ons-back-button>Back</ons-back-button></div>
+        <div class="center">Events List</div>
+    </ons-toolbar>
+    <div class="navigation-bar">
+        <div class="navigation-bar__center">
+            <input type="search" data-ng-model="search" class="search-input" style="width: 96%; margin: 6px auto 6px auto;" placeholder="Search">
+        </div>
+    </div>
+    <ons-scroller>
+        <ons-list class="person-list" ng-repeat="(key, value) in items | filter:search" >
+            <ons-list-item class="list__item--chevron list__item__line-height" data="{{value.id}}" ng-click="eventDetail(value)">
+                {{key}} - {{value.eventName}}  ,{{value.id}}
+            </ons-list-item>
+        </ons-list>
+    </ons-scroller>
+</ons-page>

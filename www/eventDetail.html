@@ -1,0 +1,76 @@
+﻿<ons-page ng-controller="eventDetailCtrl" modifier="shop-details">
+    <ons-toolbar modifier="transparent">
+        <div class="left"><ons-back-button style="color:white">Back</ons-back-button></div>
+        <div class="right"><ons-toolbar-button><ons-icon icon="ion-gear-a" style="vertical-align: -4px; font-size: 28px;color:white"></ons-icon></ons-toolbar-button></div>
+    </ons-toolbar>
+    <div class="card">
+        <div class="transbox">
+            <div class="card-name">{{eventDetail.eventName}}<br>{{eventDetail.location}}</div>
+            <div class="card-desc">{{eventDetail.description}}</div>
+
+        </div>
+    </div>
+    <div class="rating">
+        <div class="rating-num">
+            {{eventDetail.startDate}} - {{eventDetail.endDate}}
+        </div>
+    </div>
+
+    <ons-list style="border-top: none">
+        <ons-list-item style="line-height: 1; padding: 0;">
+            <ons-row class="action">
+
+                <ons-col class="action-col">
+                    <div class="action-icon"><ons-icon icon="ion-ios-star-half"></ons-icon></div>
+                    <div class="action-label">Rate</div>
+                </ons-col>
+
+                <ons-col class="action-col">
+                    <div class="action-icon"><ons-icon icon="ion-bookmark"></ons-icon></div>
+                    <div class="action-label">Favorite</div>
+                </ons-col>
+
+                <ons-col class="action-col">
+                    <div class="action-icon"><ons-icon icon="ion-share"></ons-icon></div>
+                    <div class="action-label">Share</div>
+                </ons-col>
+
+                <ons-col class="action-col">
+                    <div class="action-icon"><ons-icon icon="ion-compose"></ons-icon></div>
+                    <div class="action-label">Check In</div>
+                </ons-col>
+
+            </ons-row>
+        </ons-list-item>
+    </ons-list>
+
+    <ons-list style="margin-top: 12px;">
+        <ons-list-item modifier="chevron">
+            <div class="prop-desc">
+                <ons-icon icon="fa-map-marker"></ons-icon>
+                {{eventDetail.location}}
+            </div>
+        </ons-list-item>
+
+        <ons-list-item modifier="chevron">
+            <div class="prop-desc">
+                <ons-icon icon="fa-mobile"></ons-icon>
+                (111) 123-4567
+            </div>
+        </ons-list-item>
+
+        <ons-list-item modifier="chevron">
+            <div class="prop-desc">
+                <ons-icon icon="fa-book"></ons-icon>
+                Store Photos and Menus
+            </div>
+        </ons-list-item>
+
+        <ons-list-item modifier="chevron">
+            <div class="prop-desc">
+                <ons-icon icon="fa-clock-o"></ons-icon>
+                Make a Reservation
+            </div>
+        </ons-list-item>
+    </ons-list>
+</ons-page>

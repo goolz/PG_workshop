@@ -6,127 +6,20 @@
     <link rel="stylesheet" href="lib/onsen/css/onsen-css-components.css" />
     <link rel="stylesheet" href="css/app.css" />
     <script src="lib/onsen/js/onsenui.js"></script>
+    <script src="lib/onsen/js/angular/angular.js"></script>
+    <script src="lib/onsen/js/angular-onsenui.min.js"></script>
     <script src="lib/jquery.js"></script>
+    <script src="js/app.js"></script>
     <script src="cordova.js"></script>
-    <script>
-        var isonline = false;
-        document.addEventListener("offline", onOffline, false);
-        document.addEventListener("online", onOnline, false);
-        function onOffline() {
-            var modaloffline = document.getElementById('modal-offline');
-            //var modaloffline1 = document.getElementById('modal-offline1');
-            modaloffline.show({ animation: "fade" });
-            modaloffline1.show({ animation: "fade" });
-            isonline = false;
-        }
-        function onOnline() {
-            var modaloffline = document.getElementById('modal-offline');
-            //var modaloffline1 = document.getElementById('modal-offline1');
-            modaloffline.hide({ animation: "fade" });
-            modaloffline1.hide({ animation: "fade" });
-            isonline = true;
-        }
-        ons.ready(function () {
-            if (navigator.connection.type !== Connection.NONE) isonline = true;
-
-            var button = document.getElementById('push-button');
-            var myNavigator = document.getElementById('myNavigator');
-
-            //var storage = window.localStorage;            
-            var email = localStorage.getItem("email");
-            var password = localStorage.getItem("password");
-            if (password != 'null' && email != 'null') {
-                var chkAuto = localStorage.getItem("chkAuto");
-                document.getElementById('email').value = email;
-                document.getElementById('password').value = password;
-                if (chkAuto && isonline) login();
-            }
-
-            myNavigator.addEventListener('init', function (event) {
-                var page = event.target;
-                if (page.id === 'login') {
-                }
-            });
-        });
-
-        function scanBarcode() {
-            //$(".card").css('background-image','url(http://b2b.webili.ir/wp-content/uploads/2016/02/b2b_imageProduct_FB_IMG_1453185258596.jpg)');
-
-            console.log("start scaning");
-            //getData(6910333665);
-            barcodemin.scanBarcode(function (result) {
-
-                scanmodal.show({ animation: "fade" });
-                console.log("barcod id = " + result);
-                console.log("result = " + result);
-                getData(result);
-            }, function (error) {
-                alert("Scanning failed: " + error);
-            }
-         );
-
-
-        }
-        function getData(id) {
-            console.log("run function");
-            $.ajax({
-                url: 'http://b2b.webili.ir/web_service/get_data/?action=test&id=' + id,
-                data: {},
-                success: function (data) {
-                    console.log("geting data ...");
-                    var r = JSON.stringify(data);
-                    console.log("success " + r);
-                    $(".card").css('background-image', "url(" + data[0].image_url + ")");
-                    $("#name").html(data[0].name);
-                    $("#mobile").text(data[0].mobile);
-                },
-                error: function (xhr, ajaxOptions, thrownError) {
-                    ons.notification.alert(xhr.status + " " + thrownError);
-                }
-            })
-
-            scanmodal.hide({ animation: "fade" });
-        }
-
-        var login = function () {
-            var modal = document.getElementById('modal');
-            var email = document.getElementById('email').value;
-            var password = document.getElementById('password').value;
-            var myNavigator = document.getElementById('myNavigator');
-            var chkRemem = document.getElementById('chkRemem');
-            var chkAuto = document.getElementById('chkAuto');
-            //var storage = window.localStorage;
-
-            modal.show({ animation: "fade" });
-            $.ajax({
-                url: 'http://b2b.webili.ir/web_service/get_data/?action=auth&email=' + email + '&password=' + password,
-                data: {},
-                success: function (data) {
-                    if (data == "1") {
-                        if (chkRemem.checked) {
-                            localStorage.setItem("email", email);
-                            localStorage.setItem("password", password);
-                            localStorage.setItem("chkAuto", chkAuto.checked);
-
-                        }
-                        else {
-                            localStorage.clear();
-                        }
-                        myNavigator.pushPage('scan.html', { data: { title: 'Scan' } });
-                    }
-                    else ons.notification.alert('No Data');
-                    modal.hide({ animation: "fade" });
-                },
-                error: function (xhr, ajaxOptions, thrownError) {
-                    ons.notification.alert(xhr.status + " " + thrownError);
-                    modal.hide({ animation: "fade" });
-                }
-            })
-        };
-
-    </script>
 </head>
 <body>
+    <ons-modal id="modal-offline">
+        <ons-icon size="40px" icon="warning"></ons-icon>
+        <div class="center">No Connection</div>
+    </ons-modal>
+    <ons-modal id="modal_wating">
+        <ons-icon size="40px" spin icon="md-spinner"></ons-icon>
+    </ons-modal>
     <ons-navigator id="myNavigator" page="login"></ons-navigator>
     <ons-template id="login">
         <ons-page>
@@ -135,10 +28,6 @@
             </ons-toolbar>
             <ons-modal id="modal">
                 <ons-icon size="40px" spin icon="md-spinner"></ons-icon>
-            </ons-modal>
-            <ons-modal id="modal-offline">
-                <ons-icon size="40px" icon="warning"></ons-icon>
-                <div class="center">No Connection</div>
             </ons-modal>
             <div style="text-align: center; margin-top: 30px;">
                 <p>

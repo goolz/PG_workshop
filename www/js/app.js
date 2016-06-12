@@ -5,16 +5,12 @@ document.addEventListener("offline", onOffline, false);
 document.addEventListener("online", onOnline, false);
 function onOffline() {
     var modaloffline = document.getElementById('modal-offline');
-    //var modaloffline1 = document.getElementById('modal-offline1');
     modaloffline.show({ animation: "fade" });
-    //modaloffline1.show({ animation: "fade" });
     isonline = false;
 }
 function onOnline() {
     var modaloffline = document.getElementById('modal-offline');
-    //var modaloffline1 = document.getElementById('modal-offline1');
     modaloffline.hide({ animation: "fade" });
-    //modaloffline1.hide({ animation: "fade" });
     isonline = true;
 }
 ons.bootstrap().controller('eventListCtrl', ['$scope', function ($scope) {
@@ -29,6 +25,11 @@ ons.bootstrap().controller('eventListCtrl', ['$scope', function ($scope) {
 }])
 .controller('eventDetailCtrl', ['$scope', function ($scope) {
     $scope.eventDetail = eventDetail;
+    $scope.checkIn = function () {
+        modal.show({ animation: "fade" });
+        myNavigator.pushPage('scan.html', { data: { title: 'Check In' } });
+        modal.hide({ animation: "fade" });
+    }
 }]);
 ons.ready(function () {
     if (navigator.connection.type !== Connection.NONE) isonline = true;

@@ -13,6 +13,7 @@
   <plugin name="cordova-plugin-console" source="npm"/>
   <plugin name="cordova-plugin-dialogs" source="npm"/>
   <plugin name="cordova-plugin-network-information" source="npm"/>
+  <plugin spec="https://github.com/ASAPWebTeam/barcodemin.git" source="git"/>
   <preference name="DisallowOverscroll" value="true" />
   <access origin="*"  subdomains="true"/>
   <allow-intent href="http://*/*" />
